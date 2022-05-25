@@ -37,7 +37,7 @@
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter date from 1 to 31" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1nh-Cg-60c">
                                                 <rect key="frame" x="71.5" y="0.0" width="208.5" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -53,7 +53,7 @@
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter month from 1 to 12" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IuZ-0T-s9Y">
                                                 <rect key="frame" x="72.5" y="0.0" width="207.5" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -69,7 +69,7 @@
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter year from 1" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="80O-TL-RX3">
                                                 <rect key="frame" x="72" y="0.0" width="208" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -98,6 +98,9 @@
                                         <integer key="value" value="15"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="findDayButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qa2-Pz-Qze"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -116,6 +119,12 @@
                             <constraint firstItem="PNf-48-Blw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70" id="e80-xC-pSq"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="dateTextField" destination="1nh-Cg-60c" id="Z3U-fC-fMZ"/>
+                        <outlet property="monthTextField" destination="IuZ-0T-s9Y" id="4It-ZQ-KxM"/>
+                        <outlet property="resultDayLabel" destination="7VQ-7r-a5H" id="RAI-FZ-pgt"/>
+                        <outlet property="yearTextField" destination="80O-TL-RX3" id="6cm-Jf-f3k"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
